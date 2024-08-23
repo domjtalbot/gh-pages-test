@@ -17,7 +17,11 @@
       "executor": "nx:run-commands",
       "options": {
         "cwd": "my-website",
-        "command": "docusaurus start --no-open"
+        "parallel": false,
+        "commands": [
+          "rm -Rf .docusaurus",
+          "docusaurus start --no-open --port 4200"
+        ]
       }
     },
     "build": {
