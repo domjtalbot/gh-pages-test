@@ -20,7 +20,7 @@
         "parallel": false,
         "commands": [
           "rm -Rf .docusaurus",
-          "docusaurus start --no-open --port 4201"
+          "docusaurus start --no-open --host 0.0.0.0"
         ]
       }
     },
