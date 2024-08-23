@@ -1,0 +1,48 @@
+{
+  "name": "styleguide",
+  "version": "1.0.0",
+  "description": "Style guides for JH projects",
+  "private": true,
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "packageManager": "pnpm@7.33.7+sha512.7afe2410642b39c698df46da4ce5c7231a5cce360698d69f8cf8f42257d40b3e43f231053b07b8de849fd4ffbf4a71ff57b835137777a352388f3d3da747200e",
+  "scripts": {
+    "lint:fix": "nx format:write && nx run-many --target=lint --all --fix",
+    "lint": "nx format && nx run-many --target=lint --all",
+    "postinstall": "husky install",
+    "test": "nx run-many --target=test --all --passWithNoTests",
+    "prepare": "husky"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "devDependencies": {
+    "@nx/eslint": "19.6.2",
+    "@nx/eslint-plugin": "19.6.2",
+    "@nx/jest": "19.6.2",
+    "@nx/js": "19.6.2",
+    "@swc-node/register": "~1.9.1",
+    "@swc/core": "~1.5.7",
+    "@swc/helpers": "~0.5.11",
+    "@types/jest": "^29.5.12",
+    "@types/node": "18.16.9",
+    "@typescript-eslint/eslint-plugin": "^7.16.0",
+    "@typescript-eslint/parser": "^7.16.0",
+    "eslint": "~8.57.0",
+    "eslint-config-prettier": "^9.0.0",
+    "husky": "^9.1.5",
+    "jest": "^29.7.0",
+    "jest-environment-node": "^29.7.0",
+    "lint-staged": "^15.2.9",
+    "nx": "19.6.2",
+    "prettier": "^2.6.2",
+    "ts-jest": "^29.1.0",
+    "ts-node": "10.9.1",
+    "typescript": "~5.5.2",
+    "verdaccio": "^5.0.4"
+  },
+  "nx": {
+    "includedScripts": []
+  }
+}

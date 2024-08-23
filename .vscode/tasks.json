@@ -1,0 +1,19 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Logs — code",
+      "type": "shell",
+      "command": "docker compose -p ghpage-test_devcontainer -f ./.devcontainer/docker-compose.yml logs -f --no-log-prefix code",
+      "auto": true,
+      "isBackground": false,
+      "presentation": {
+        "reveal": "silent",
+        "panel": "dedicated",
+        "echo": false,
+        "clear": true
+      },
+      "problemMatcher": []
+    }
+  ]
+}

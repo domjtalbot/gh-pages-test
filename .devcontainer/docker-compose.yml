@@ -1,0 +1,23 @@
+services:
+  code:
+    build:
+      context: ..
+      dockerfile: ./.devcontainer/images/dockerfile.code
+    volumes:
+      - type: bind
+        source: ${HOME}/.gitconfig
+        target: /root/.gitconfig
+        read_only: true
+      - ../:/repo
+      - /var/run/docker.sock:/var/run/docker.sock
+      - node_modules:/repo/node_modules
+      - pnpm_7_store:/repo/.pnpm-store
+      - pnpm_7_store:/workspaces/ghpage-test/.pnpm-store
+      - nx_cache:/repo/.nx
+      - nx_build:/repo/dist
+
+volumes:
+  node_modules:
+  pnpm_7_store:
+  nx_cache:
+  nx_build:

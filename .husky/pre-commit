@@ -1,0 +1,2 @@
+# Run linting tasks against staged files
+pnpm lint-staged --concurrent 2 --verbose

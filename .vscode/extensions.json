@@ -1,0 +1,9 @@
+{
+  "recommendations": [
+    "nrwl.angular-console",
+    "esbenp.prettier-vscode",
+    "ms-vscode-remote.remote-containers",
+    "GitHub.copilot",
+    "firsttris.vscode-jest-runner"
+  ]
+}
