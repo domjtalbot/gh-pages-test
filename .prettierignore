@@ -27,3 +27,5 @@ build-mesh/
 Caddyfile
 node_modules
 pnpm-lock.yaml
+/.nx/cache
+/.nx/workspace-data

@@ -1,0 +1,65 @@
+{
+  "name": "my-website",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "styleguides/my-website/src",
+  "projectType": "application",
+  "release": {
+    "version": {
+      "generatorOptions": {
+        "packageRoot": "dist/{projectRoot}",
+        "currentVersionResolver": "git-tag"
+      }
+    }
+  },
+  "tags": [],
+  "targets": {
+    "dev": {
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "my-website",
+        "command": "docusaurus start --no-open"
+      }
+    },
+    "build": {
+      "executor": "nx:run-commands",
+      "outputs": ["{workspaceRoot}/dist/my-website"],
+      "options": {
+        "cwd": "my-website",
+        "command": "docusaurus build --out-dir ../dist/my-website"
+      }
+    },
+    "deploy": {
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "my-website",
+        "command": "docusaurus deploy --out-dir ../dist/my-website"
+      }
+    },
+    "clear": {
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "my-website",
+        "command": "docusaurus clear --out-dir ../dist/my-website"
+      }
+    },
+    "write-translations": {
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "my-website",
+        "command": "docusaurus write-translations --out-dir ../dist/my-website"
+      }
+    },
+    "write-heading-ids": {
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "my-website",
+        "command": "docusaurus write-heading-ids --out-dir ../dist/my-website"
+      }
+    },
+    "nx-release-publish": {
+      "options": {
+        "packageRoot": "dist/{projectRoot}"
+      }
+    }
+  }
+}

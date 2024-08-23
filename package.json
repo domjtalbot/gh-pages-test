@@ -8,6 +8,7 @@
   "license": "MIT",
   "packageManager": "pnpm@7.33.7+sha512.7afe2410642b39c698df46da4ce5c7231a5cce360698d69f8cf8f42257d40b3e43f231053b07b8de849fd4ffbf4a71ff57b835137777a352388f3d3da747200e",
   "scripts": {
+    "build": "nx run-many --target=build --all",
     "lint:fix": "nx format:write && nx run-many --target=lint --all --fix",
     "lint": "nx format && nx run-many --target=lint --all",
     "postinstall": "husky install",
@@ -15,9 +16,18 @@
     "prepare": "husky"
   },
   "dependencies": {
+    "@docusaurus/core": "3.5.2",
+    "@docusaurus/preset-classic": "3.5.2",
+    "@mdx-js/react": "^3.0.0",
+    "clsx": "^2.0.0",
+    "prism-react-renderer": "^2.3.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
     "tslib": "^2.3.0"
   },
   "devDependencies": {
+    "@docusaurus/module-type-aliases": "3.5.2",
+    "@docusaurus/types": "3.5.2",
     "@nx/eslint": "19.6.2",
     "@nx/eslint-plugin": "19.6.2",
     "@nx/jest": "19.6.2",
